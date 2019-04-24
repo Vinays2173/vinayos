@@ -1,0 +1,23 @@
+#include <iostream> 
+#include <string.h> 
+#include <vector> 
+// total number of process 
+#define P 4 
+// total number of resources 
+#define R 3 
+  
+// total safe-sequences 
+int total = 0; 
+  
+using namespace std; 
+  
+// function to check if process 
+// can be allocated or not 
+bool is_available(int process_id, int allocated[][R], 
+                  int max[][R], int need[][R], int available[]) 
+{ 
+  
+    bool flag = true; 
+  
+    // check if all the available resources 
+    // are less greater than need of process 
